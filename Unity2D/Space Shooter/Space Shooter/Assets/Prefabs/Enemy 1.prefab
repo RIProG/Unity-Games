@@ -11,8 +11,10 @@ GameObject:
   - component: {fileID: 2558758185100401279}
   - component: {fileID: 2558758185100401272}
   - component: {fileID: 173319077190417354}
-  m_Layer: 0
-  m_Name: Enemy
+  - component: {fileID: 451599068873078167}
+  - component: {fileID: 4224774061552441253}
+  m_Layer: 9
+  m_Name: Enemy 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7aa9f2f7718fcec4db65b6948a1ee062, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 28549ab84fc833f48ba1a78828da2e3a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -92,5 +94,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a06896ea1d6b331419111baf482551bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveConfig: {fileID: 11400000, guid: 5136be1c47e594741b46de1b0f722031, type: 2}
-  moveSpeed: 2
+--- !u!114 &451599068873078167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2558758185100401273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c01dc144b48893444a911610b386ed05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  projectileSpeed: 10
+  laserPrefab: {fileID: 4172644961228839874, guid: a1425affbb476394399f434f5494c2ae,
+    type: 3}
+--- !u!58 &4224774061552441253
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2558758185100401273}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.3566075
