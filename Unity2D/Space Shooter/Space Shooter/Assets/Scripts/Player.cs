@@ -60,6 +60,7 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
+        FindObjectOfType<Level>().LoadGameOver();
         Destroy(gameObject);
         GameObject explosion = Instantiate(
             deathVFX,
@@ -67,6 +68,11 @@ public class Player : MonoBehaviour
             transform.rotation);
         Destroy(explosion, durationOfExplosion);
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, deathSFXVolume);
+    }
+
+    public int GetHealth()
+    {
+        return health;
     }
 
     private void Fire()
